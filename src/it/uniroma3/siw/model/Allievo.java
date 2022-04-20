@@ -41,10 +41,7 @@ public class Allievo {
 	
 	//L'informazione relativa alla società in cui un allievo lavora potrebbe essere caricata
 	//solo su richiesta poiché non indispensabile per la società che eroga corsi di formazione.
-	//Inoltre, poiché gli allievi sono dipendenti di società esterne potrebbe essere comodo
-	//applicare una politica cascade sull'associazione con la società nel caso di creazione e
-	//aggiornamento
-	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Societa societa;
 	
 	public Allievo() {}

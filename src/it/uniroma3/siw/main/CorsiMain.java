@@ -44,6 +44,7 @@ public class CorsiMain {
 		a2.setSocieta(s1);
 		
 		tx.begin();
+		em.persist(d1);
 		em.persist(a1);
 		em.persist(a2);
 		em.persist(c1);

@@ -27,9 +27,7 @@ public class Corso {
 	
 	private int durataMesi;
 	
-	//Poiché i docenti sono consulenti potrebbe essere utile usare una politica cascade solo nel
-	//caso della creazione di un corso
-	@ManyToOne(cascade = {CascadeType.PERSIST})
+	@ManyToOne
 	private Docente docente;
 	
 	@ManyToMany
